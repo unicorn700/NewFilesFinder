@@ -383,6 +383,9 @@ public class Results extends javax.swing.JDialog {
 
      public  String getExtension(File f)
      {
+         if(f.isDirectory()) {
+             return "File Folder";
+         }
         String ext = null;
         String s = f.getName();
         int i = s.lastIndexOf('.');
